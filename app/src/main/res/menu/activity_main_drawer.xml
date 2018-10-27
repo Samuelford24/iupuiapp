@@ -14,8 +14,9 @@
             android:title="State Races" />
         <item
             android:id="@+id/county"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/vc"
             android:title="County Races"
+
             />
             <item
                 android:id="@+id/nav_send"
