@@ -23,7 +23,7 @@
         <activity android:name=".federal_races"/>
         <activity android:name=".state_races"/>
         <activity android:name="senate_canditates"/>
-
+<activity android:name=".house_canditates"/>
     </application>
 
 </manifest>

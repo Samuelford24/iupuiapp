@@ -19,7 +19,8 @@ tools:context=".MainActivity">
         android:layout_height="wrap_content"
         android:text="Mike Braun"
         android:textAlignment="center"
-        android:textColor="@android:color/background_dark"/>
+        android:textColor="@android:color/background_dark"
+        android:textStyle="bold"/>
 
     <ListView
         android:layout_width="wrap_content"
