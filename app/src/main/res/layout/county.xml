@@ -19,6 +19,7 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
+            android:onClick="show_commissioner"
             android:id="@+id/bankcardId"
             android:layout_width="160dp"
             android:layout_height="190dp"
@@ -60,6 +61,7 @@
             android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="190dp"
+            android:onClick="show_council1"
             android:layout_margin="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -105,6 +107,7 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="160dp"
+            android:onClick="show_council2"
             android:layout_height="190dp"
             android:layout_margin="10dp">
             <LinearLayout
@@ -144,6 +147,7 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="160dp"
+            android:onClick="show_council3"
             android:layout_height="190dp"
             android:layout_margin="10dp">
 
@@ -197,6 +201,7 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="160dp"
+            android:onClick="show_council4"
             android:layout_height="190dp"
             android:layout_margin="10dp">
             <LinearLayout
