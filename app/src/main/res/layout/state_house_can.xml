@@ -23,6 +23,7 @@
             android:textColor="@android:color/background_dark"/>
 
         <ListView
+            android:id="@+id/tonyapaff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
@@ -32,7 +33,9 @@
 
     <View
         android:id="@+id/secondView"
-        android:layout_width="0dp"
+        android:layout_width="1dp"
+        android:background="@android:color/darker_gray"
+
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true" />
 
@@ -53,6 +56,7 @@
             android:textColor="@android:color/background_dark"
             android:textStyle="bold" />
         <ListView
+            android:id="@+id/eddiefelling"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
