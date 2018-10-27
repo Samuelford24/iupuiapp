@@ -23,6 +23,7 @@ tools:context=".MainActivity">
         android:textStyle="bold"/>
 
     <ListView
+        android:id="@+id/mikebraun2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
        />
@@ -32,7 +33,9 @@ tools:context=".MainActivity">
 
 <View
     android:id="@+id/secondView"
-    android:layout_width="0dp"
+    android:layout_width="1dp"
+
+        android:background="@android:color/darker_gray"
     android:layout_height="match_parent"
     android:layout_centerHorizontal="true" />
 
@@ -53,6 +56,7 @@ tools:context=".MainActivity">
         android:textColor="@android:color/background_dark"
         android:textStyle="bold" />
     <ListView
+        android:id="@+id/joedonnely"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
