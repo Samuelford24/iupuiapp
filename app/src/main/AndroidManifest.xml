@@ -22,6 +22,8 @@
         <activity android:name=".county_races"/>
         <activity android:name=".federal_races"/>
         <activity android:name=".state_races"/>
+        <activity android:name=".state_senate"/>
+            <activity android:name=".state_house"/>
         <activity android:name="senate_canditates"/>
 <activity android:name=".house_canditates"/>
     </application>
