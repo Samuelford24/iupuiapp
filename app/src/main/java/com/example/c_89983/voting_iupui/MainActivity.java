@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
+import android.widget.VideoView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,9 +14,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.net.Uri;
+import android.media.MediaPlayer;
+import android.app.ProgressDialog;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    VideoView video;
+    String video_url = "https://www.youtube.com/watch?v=pkPOwhRgTe8";
+    ProgressDialog pd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +33,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        video = (VideoView)findViewById(R.id.video);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -34,6 +43,23 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        pd = new ProgressDialog(MainActivity.this);
+        pd.setMessage("Buffering video please wait...");
+        pd.show();
+
+        Uri uri = Uri.parse(video_url);
+        video.setVideoURI(uri);
+        video.start();
+
+        video.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                //close the progress dialog when buffering is done
+                pd.dismiss();
+            }
+        });
+
     }
 
     @Override
@@ -96,3 +122,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 }
+
+
+
+
